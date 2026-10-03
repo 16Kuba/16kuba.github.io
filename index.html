@@ -1,433 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan The Peak</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Plan The Peak</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+            <a href="#" class="logo">planthe<span>peak.</span></a>
 
-    <!-- NAVIGATION -->
-    <nav class="navbar">
-        <a href="#" class="logo">planthe<span>peak.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#categories">Collections</a></li>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#journal">Journal</a></li>
+            </ul>
 
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#categories">Collections</a></li>
-            <li><a href="#about">Our Story</a></li>
-            <li><a href="#journal">Journal</a></li>
-        </ul>
+            <div class="nav-actions">
+                <button class="nav-icon">⌕</button>
+                <button class="nav-icon cart">
+                    ♡
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
 
-        <div class="nav-actions">
-            <button class="nav-icon">⌕</button>
-
-            <button class="nav-icon cart">
-                ♡
-                <span class="cart-count" id="cartCount">0</span>
-            </button>
-
-            <button class="menu-btn" onclick="toggleMenu()">☰</button>
-        </div>
-    </nav>
-
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="eyebrow">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                <button class="menu-btn" onclick="toggleMenu()">☰</button>
             </div>
-
-            <h1>
-                Lorem ipsum dolor <em>sit amet.</em>
-            </h1>
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.
-            </p>
-
-            <div class="buttons">
-                <a href="#shop" class="btn btn-primary">
-                    Shop planners
-                </a>
-
-                <a href="#categories" class="btn btn-secondary">
-                    Explore collection
-                </a>
-            </div>
-        </div>
-
-        <div class="hero-image">
-            <img src="planner.png" id="planner_placeholder">
-        </div>
-    </section>
+        </nav>
 
 
-    <!-- TRUST -->
-    <section class="trust">
-        <div class="trust-item">
-            ✦ Premium paper
-            <span>FSC-certified materials</span>
-        </div>
-
-        <div class="trust-item">
-            ♡ Designed with intention
-            <span>Created in London</span>
-        </div>
-
-        <div class="trust-item">
-            ↗ Free UK delivery
-            <span>On orders over £50</span>
-        </div>
-    </section>
-
-
-    <!-- CATEGORIES -->
-    <section class="section" id="categories">
-        <div class="section-header">
-            <div>
-                <div class="eyebrow">Shop by collection</div>
-                <h2>Find your peak.</h2>
-            </div>
-
-            <!-- <p> -->
-                <!-- Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus. -->
-            <!-- </p> -->
-        </div>
-
-        <div class="category-grid">
-
-            <a href="#" class="category">
-                <div class="category-icon">▤</div>
-                <h3>Mt Everest Collection</h3>
-                <p>Daily, weekly & yearly</p>
-            </a>
-
-            <a href="#" class="category">
-                <div class="category-icon">☑</div>
-                <h3>K2 Collection</h3>
-                <p>Ideas worth keeping</p>
-            </a>
-
-            <!-- <a href="#" class="category">
-                <div class="category-icon">✎</div>
-                <h3>Accessories</h3>
-                <p>Make planning yours</p>
-            </a> -->
-
-            <!-- <a href="#" class="category">
-                <div class="category-icon">♡</div>
-                <h3>Gift sets</h3>
-                <p>Thoughtful gifts</p>
-            </a> -->
-
-        </div>
-    </section>
-
-
-    <!-- PRODUCTS -->
-    <section class="section products-section" id="shop">
-
-        <div class="section-header">
-            <div>
-                <div class="eyebrow">The essentials</div>
-                <h2>Best sellers.</h2>
-            </div>
-
-            <a href="#" class="btn btn-secondary">
-                View all products
-            </a>
-        </div>
-
-        <div class="product-grid">
-
-            <!-- PRODUCT 1 -->
-            <article class="product-card">
-                
-                <a href="product.html" class="product-link">
-                    <div class="product-image">
-                        <span class="badge">Bestseller</span>
-                        <img src="planner.png" id="planner_placeholder">
-                    </div>
-                </a>
-
-                <div class="product-info">
-                    <div>
-                        <div class="product-name">
-                            The Daily Planner
-                        </div>
-
-                        <div class="product-description">
-                            Undated · 12 months
-                        </div>
-                    </div>
-
-                    <div class="price">
-                        £28
-                    </div>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="eyebrow">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
                 </div>
 
-                <button class="add-btn" onclick="addToCart()">
-                    Add to bag
-                </button>
-            </article>
+                <h1>
+                    Lorem ipsum dolor <em>sit amet.</em>
+                </h1>
 
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.
+                </p>
 
-            <!-- PRODUCT 2 -->
-            <article class="product-card">
-                <a href="product.html" class="product-link">
-                    <div class="product-image">
-                        <span class="badge">Bestseller</span>
-                        <img src="planner.png" id="planner_placeholder">
-                    </div>
-                </a>
+                <div class="buttons">
+                    <a href="#shop" class="btn btn-primary">
+                        Shop planners
+                    </a>
 
-                <div class="product-info">
-                    <div>
-                        <div class="product-name">
-                            Weekly Focus
-                        </div>
-
-                        <div class="product-description">
-                            2027 · Weekly
-                        </div>
-                    </div>
-
-                    <div class="price">
-                        £32
-                    </div>
+                    <a href="#categories" class="btn btn-secondary">
+                        Explore collection
+                    </a>
                 </div>
-
-                <button class="add-btn" onclick="addToCart()">
-                    Add to bag
-                </button>
-            </article>
-
-
-            <!-- PRODUCT 3 -->
-            <article class="product-card">
-                <a href="product.html" class="product-link">
-                    <div class="product-image">
-                        <span class="badge">Bestseller</span>
-                        <img src="planner.png" id="planner_placeholder">
-                    </div>
-                </a>
-
-                <div class="product-info">
-                    <div>
-                        <div class="product-name">
-                            Goals & Intentions
-                        </div>
-
-                        <div class="product-description">
-                            Guided workbook
-                        </div>
-                    </div>
-
-                    <div class="price">
-                        £22
-                    </div>
-                </div>
-
-                <button class="add-btn" onclick="addToCart()">
-                    Add to bag
-                </button>
-            </article>
-
-
-            <!-- PRODUCT 4 -->
-            <article class="product-card">
-                <a href="product.html" class="product-link">
-                    <div class="product-image">
-                        <span class="badge">Bestseller</span>
-                        <img src="planner.png" id="planner_placeholder">
-                    </div>
-                </a>
-
-                <div class="product-info">
-                    <div>
-                        <div class="product-name">
-                            Notes & Ideas
-                        </div>
-
-                        <div class="product-description">
-                            Lined · 160 pages
-                        </div>
-                    </div>
-
-                    <div class="price">
-                        £16
-                    </div>
-                </div>
-
-                <button class="add-btn" onclick="addToCart()">
-                    Add to bag
-                </button>
-            </article>
-
-        </div>
-    </section>
-
-
-    <!-- FEATURE -->
-    <section class="feature" id="about">
-
-        <div class="feature-image">
-            <img src="planner_placeholder.png" id="planner_placeholder2">
-        </div>
-
-
-        <div class="feature-content">
-
-            <div class="eyebrow">
-                Lorem ipsum dolor.
             </div>
 
+            <div class="hero-image">
+                <img src="planner.png" id="planner_placeholder">
+            </div>
+        </section>
+
+
+        <!-- TRUST -->
+        <section class="trust">
+            <div class="trust-item">
+                ✦ Premium paper
+                <span>FSC-certified materials</span>
+            </div>
+
+            <div class="trust-item">
+                ♡ Designed with intention
+                <span>Created in London</span>
+            </div>
+
+            <div class="trust-item">
+                ↗ Free UK delivery
+                <span>On orders over £50</span>
+            </div>
+        </section>
+
+
+        <!-- CATEGORIES -->
+        <section class="section" id="categories">
+            <div class="section-header">
+                <div>
+                    <div class="eyebrow">Shop by collection</div>
+                    <h2>Find your peak.</h2>
+                </div>
+
+                <!-- <p> -->
+                    <!-- Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus. -->
+                <!-- </p> -->
+            </div>
+
+            <div class="category-grid">
+                <a href="#" class="category">
+                    <div class="category-icon">
+                        <img src="everest-bg.png" alt="Mt Everest Collection">
+                    </div>
+
+                    <h3>Mt Everest Collection</h3>
+                    <p>Daily, weekly & yearly</p>
+                </a>
+
+                <a href="#" class="category">
+                    <div class="category-icon">
+                        <img src="k2-bg.png" alt="K2 Collection">
+                    </div>
+
+                    <h3>K2 Collection</h3>
+                    <p>For your hardest tasks</p>
+                </a>
+
+                <!-- <a href="#" class="category">
+                    <div class="category-icon">✎</div>
+                    <h3>Accessories</h3>
+                    <p>Make planning yours</p>
+                </a> -->
+
+                <!-- <a href="#" class="category">
+                    <div class="category-icon">♡</div>
+                    <h3>Gift sets</h3>
+                    <p>Thoughtful gifts</p>
+                </a> -->
+            </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section class="section products-section" id="shop">
+            <div class="section-header">
+                <div>
+                    <div class="eyebrow">The essentials</div>
+                    <h2>Best sellers.</h2>
+                </div>
+
+                <a href="#" class="btn btn-secondary">
+                    View all products
+                </a>
+            </div>
+
+            <div class="product-grid">
+                <!-- PRODUCT 1 -->
+                <article class="product-card">
+                    <a href="product2.html" class="product-link">
+                        <div class="product-image">
+                            <span class="badge">Bestseller</span>
+                            <img src="planner.png" id="planner_placeholder">
+                        </div>
+                    </a>
+
+                    <div class="product-info">
+                        <div>
+                            <div class="product-name">
+                                Planner
+                            </div>
+
+                            <div class="product-description">
+                                2027 · 12 months
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            £28
+                        </div>
+                    </div>
+
+                    <button class="add-btn" onclick="addToCart()">
+                        Add to bag
+                    </button>
+                </article>
+
+
+                <!-- PRODUCT 2 -->
+                <article class="product-card">
+                    <a href="product.html" class="product-link">
+                        <div class="product-image">
+                            <span class="badge">New</span>
+                            <img src="planner.png" id="planner_placeholder">
+                        </div>
+                    </a>
+
+                    <div class="product-info">
+                        <div>
+                            <div class="product-name">
+                                Personalized Planner
+                            </div>
+
+                            <div class="product-description">
+                                2027 · 12 months
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            £28
+                        </div>
+                    </div>
+
+                    <button class="add-btn" onclick="addToCart()">
+                        Add to bag
+                    </button>
+                </article>
+
+
+                <!-- PRODUCT 3 -->
+                <!-- <article class="product-card">
+                    <a href="product.html" class="product-link">
+                        <div class="product-image">
+                            <span class="badge">Bestseller</span>
+                            <img src="planner.png" id="planner_placeholder">
+                        </div>
+                    </a>
+
+                    <div class="product-info">
+                        <div>
+                            <div class="product-name">
+                                Goals & Intentions
+                            </div>
+
+                            <div class="product-description">
+                                Guided workbook
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            £22
+                        </div>
+                    </div>
+
+                    <button class="add-btn" onclick="addToCart()">
+                        Add to bag
+                    </button>
+                </article> -->
+
+
+                <!-- PRODUCT 4 -->
+                <!-- <article class="product-card">
+                    <a href="product.html" class="product-link">
+                        <div class="product-image">
+                            <span class="badge">Bestseller</span>
+                            <img src="planner.png" id="planner_placeholder">
+                        </div>
+                    </a>
+
+                    <div class="product-info">
+                        <div>
+                            <div class="product-name">
+                                Notes & Ideas
+                            </div>
+
+                            <div class="product-description">
+                                Lined · 160 pages
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            £16
+                        </div>
+                    </div>
+
+                    <button class="add-btn" onclick="addToCart()">
+                        Add to bag
+                    </button>
+                </article> -->
+
+            </div>
+        </section>
+
+
+        <!-- FEATURE -->
+        <section class="feature" id="about">
+            <div class="feature-image">
+                <img src="planner.png" id="planner_placeholder">
+            </div>
+
+            <div class="feature-content">
+                <div class="eyebrow">
+                    Lorem ipsum dolor.
+                </div>
+
+                <h2>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                </h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.
+                </p>
+
+                <ul class="feature-list">
+                    <li>Lorem ipsum dolor sit amet consectetur adipiscing elit</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipiscing elit</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipiscing elit</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipiscing elit</li>
+                </ul>
+
+                <a href="#" class="btn btn-primary">
+                    Discover our story
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- TESTIMONIAL -->
+        <section class="testimonial">
+            <div class="stars">
+                ★ ★ ★ ★ ★
+            </div>
+
+            <blockquote>
+                Without this planner i would be completely lost.<br>
+                I can finally plan my 2nd degree and my horse rides without stress.
+            </blockquote>
+
+            <cite>
+                - KUBA R. · VERIFIED CUSTOMER
+            </cite>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter" id="journal">
             <h2>
                 Lorem ipsum dolor sit amet consectetur adipiscing elit.
             </h2>
 
             <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit.
             </p>
 
-            <ul class="feature-list">
-                <li>Lorem ipsum dolor sit amet consectetur adipiscing elit</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipiscing elit</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipiscing elit</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipiscing elit</li>
-            </ul>
-
-            <a href="#" class="btn btn-primary">
-                Discover our story
-            </a>
-
-        </div>
-
-    </section>
+            <form class="newsletter-form" onsubmit="subscribe(event)">
+                <input
+                    type="email"
+                    placeholder="Your email address"
+                    required
+                >
+                <button type="submit">
+                    Join us
+                </button>
+            </form>
+        </section>
 
 
-    <!-- TESTIMONIAL -->
-    <section class="testimonial">
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        planthe<span>peak.</span>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit.,
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit..
+                    </p>
 
-        <div class="stars">
-            ★ ★ ★ ★ ★
-        </div>
-
-        <blockquote>
-            Without this planner i would be completely lost.<br>
-            I can finally plan my 2nd degree and my horse rides without stress.
-        </blockquote>
-
-        <cite>
-            — KUBA R. · VERIFIED CUSTOMER
-        </cite>
-
-    </section>
-
-
-    <!-- NEWSLETTER -->
-    <section class="newsletter" id="journal">
-
-        <h2>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit.
-        </h2>
-
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit.
-        </p>
-
-        <form class="newsletter-form" onsubmit="subscribe(event)">
-
-            <input
-                type="email"
-                placeholder="Your email address"
-                required
-            >
-
-            <button type="submit">
-                Join us
-            </button>
-
-        </form>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer>
-
-        <div class="footer-grid">
-
-            <div class="footer-brand">
-
-                <div class="logo">
-                    paper<span>ly.</span>
                 </div>
 
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit.,
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit..
-                </p>
+                <div>
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">Lorem ipsum.</a></li>
+                        <li><a href="#">Lorem ipsum.</a></li>
+                        <li><a href="#">Lorem ipsum.</a></li>
+                        <li><a href="#">Lorem ipsum.</a></li>
+                    </ul>
+                </div>
 
+                <div>
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">Our story</a></li>
+                        <li><a href="#">Journal</a></li>
+                        <li><a href="#">Stockists</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
             </div>
 
+            <div class="copyright">
+                <span>
+                    © 2026 PlanThePeak. All rights reserved.
+                </span>
 
-            <div>
-                <h4>Shop</h4>
-
-                <ul>
-                    <li><a href="#">Lorem ipsum.</a></li>
-                    <li><a href="#">Lorem ipsum.</a></li>
-                    <li><a href="#">Lorem ipsum.</a></li>
-                    <li><a href="#">Lorem ipsum.</a></li>
-                </ul>
+                <span>
+                    Made for Saji.
+                </span>
             </div>
 
-
-            <div>
-                <h4>About</h4>
-
-                <ul>
-                    <li><a href="#">Our story</a></li>
-                    <li><a href="#">Journal</a></li>
-                    <li><a href="#">Stockists</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-
-
-            <div>
-                <h4>Help</h4>
-
-                <ul>
-                    <li><a href="#">Shipping</a></li>
-                    <li><a href="#">Returns</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Privacy</a></li>
-                </ul>
-            </div>
-
-        </div>
-
-
-        <div class="copyright">
-
-            <span>
-                © 2026 Paperly. All rights reserved.
-            </span>
-
-            <span>
-                Made for Saji.
-            </span>
-
-        </div>
-
-    </footer>
-
-
-    <script src="script.js"></script>
-
-</body>
+        </footer>
+        <script src="script.js"></script>
+    </body>
 </html>

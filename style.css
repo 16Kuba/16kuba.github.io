@@ -853,3 +853,19 @@ img#planner_placeholder2 {
     width: 550px;
     height: 480px;
 }
+
+.category {
+    position: relative;
+}
+
+.category-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.category-icon img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}

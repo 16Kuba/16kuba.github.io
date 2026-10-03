@@ -945,3 +945,25 @@ button {
     }
 
 }
+
+.personalized-input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 14px;
+    padding: 14px 16px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    color: #111827;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.personalized-input:focus {
+    border-color: #111827;
+}
+
+.personalized-input::placeholder {
+    color: #9ca3af;
+}

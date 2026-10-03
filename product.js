@@ -5,12 +5,17 @@ let cart = 0;
 const productPrice = 28;
 
 
-/* =========================
-   BOOK FLIP
-========================= */
+// =========================
+// BOOK FLIP
+// =========================
 
 function flipPage() {
+
     const page = document.getElementById("page");
+
+    if (!page) {
+        return;
+    }
 
     flipped = !flipped;
 
@@ -25,133 +30,189 @@ function flipPage() {
 
 
 function nextPage() {
+
     if (!flipped) {
         flipPage();
     }
+
 }
 
 
 function previousPage() {
+
     if (flipped) {
         flipPage();
     }
+
 }
 
 
 function updatePageIndicator() {
+
     const indicator = document.getElementById("pageIndicator");
+
+    if (!indicator) {
+        return;
+    }
 
     if (flipped) {
         indicator.textContent = "Page 05 / 34";
     } else {
         indicator.textContent = "Page 04 / 34";
     }
+
 }
 
 
-/* =========================
-   QUANTITY
-========================= */
+// =========================
+// QUANTITY
+// =========================
 
 function increaseQuantity() {
+
     quantity++;
 
-    document.getElementById("quantity").textContent = quantity;
+    const quantityElement = document.getElementById("quantity");
+
+    if (quantityElement) {
+        quantityElement.textContent = quantity;
+    }
 
     updatePrice();
 }
 
 
 function decreaseQuantity() {
+
     if (quantity > 1) {
+
         quantity--;
 
-        document.getElementById("quantity").textContent = quantity;
+        const quantityElement = document.getElementById("quantity");
+
+        if (quantityElement) {
+            quantityElement.textContent = quantity;
+        }
 
         updatePrice();
     }
+
 }
 
 
 function updatePrice() {
+
     const total = quantity * productPrice;
 
-    document.getElementById("price").textContent =
-        total.toFixed(2);
+    const priceElement = document.getElementById("price");
+    const cartButton = document.querySelector(".add-cart");
 
-    document.querySelector(".add-cart").textContent =
-        "ADD TO BAG — £" + total.toFixed(2);
+    if (priceElement) {
+        priceElement.textContent = total.toFixed(2);
+    }
+
+    if (cartButton) {
+        cartButton.textContent =
+            "ADD TO BAG — £" + total.toFixed(2);
+    }
+
 }
 
 
-/* =========================
-   COLOUR
-========================= */
+// =========================
+// COLOUR
+// =========================
 
 function selectColour(button, colour) {
 
-    document
-        .querySelectorAll(".colour")
-        .forEach(item => {
-            item.classList.remove("active");
-        });
+    const colourButtons = document.querySelectorAll(".colour");
+
+    colourButtons.forEach(function(item) {
+        item.classList.remove("active");
+    });
 
     button.classList.add("active");
 
-    document.getElementById("selectedColour").textContent =
-        colour;
+    const selectedColour =
+        document.getElementById("selectedColour");
+
+    if (selectedColour) {
+        selectedColour.textContent = colour;
+    }
+
 }
 
 
-/* =========================
-   ADD TO BAG
-========================= */
+// =========================
+// ADD TO BAG
+// =========================
 
 function addToCart() {
 
     cart += quantity;
 
-    document.getElementById("cartCount").textContent = cart;
+    const cartCount =
+        document.getElementById("cartCount");
 
-    const button = document.querySelector(".add-cart");
+    if (cartCount) {
+        cartCount.textContent = cart;
+    }
+
+    const button =
+        document.querySelector(".add-cart");
+
+    if (!button) {
+        return;
+    }
 
     button.textContent = "✓ ADDED TO BAG";
 
     button.style.background = "#2563eb";
 
-    setTimeout(() => {
+    setTimeout(function() {
 
         updatePrice();
 
         button.style.background = "#111827";
 
     }, 1200);
+
 }
 
 
-/* =========================
-   MOBILE MENU
-========================= */
+// =========================
+// MOBILE MENU
+// =========================
 
 function toggleMenu() {
 
-    document
-        .getElementById("navLinks")
-        .classList
-        .toggle("active");
+    const navLinks =
+        document.getElementById("navLinks");
+
+    if (navLinks) {
+        navLinks.classList.toggle("active");
+    }
+
 }
 
 
-/* =========================
-   INITIALISE
-========================= */
+// =========================
+// INITIALISE
+// =========================
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
 
     const page = document.getElementById("page");
 
     if (page) {
-        page.addEventListener("click", flipPage);
+
+        page.addEventListener("click", function() {
+            flipPage();
+        });
+
     }
+
+    updatePrice();
+    updatePageIndicator();
 
 });
