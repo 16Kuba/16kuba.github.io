@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan The Peak | The Daily Planner</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            planthe<span>peak.</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="index.html#shop">
+                    Shop
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#categories">
+                    Collections
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#about">
+                    Our Story
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#journal">
+                    Journal
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="nav-actions">
+
+            <button class="nav-icon">
+                ⌕
+            </button>
+
+            <button class="nav-icon cart">
+                ♡
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+
+            <button class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- PRODUCT -->
+
+    <main class="product-page">
+
+
+        <!-- PLANNER -->
+
+        <section class="planner-section">
+
+            <div class="book-stage">
+
+                <div class="book">
+
+                    <!-- COVER -->
+
+                    <div class="cover">
+
+                        <div class="cover-content">
+
+                            <div class="cover-brand">
+                                PLAN THE PEAK
+                            </div>
+
+                            <h1>
+                                THE<br>
+                                DAILY<br>
+                                PLANNER
+                            </h1>
+
+                            <div class="cover-line"></div>
+
+                            <p>
+                                2027
+                            </p>
+
+                        </div>
+
+                        <div class="cover-bottom">
+                            PLAN · FOCUS · ACHIEVE
+                        </div>
+
+                    </div>
+
+
+                    <!-- FLIPPING PAGE -->
+
+                    <div
+                        class="page"
+                        id="page"
+                        onclick="flipPage()"
+                    >
+
+                        <!-- FRONT -->
+
+                        <div class="page-front">
+
+                            <div class="page-header">
+
+                                <span>
+                                    MONDAY
+                                </span>
+
+                                <span>
+                                    04
+                                </span>
+
+                            </div>
+
+
+                            <h2>
+                                Today's Plan
+                            </h2>
+
+
+                            <div class="schedule">
+
+                                <div class="time-row">
+                                    <span>08:00</span>
+                                    <div></div>
+                                </div>
+
+                                <div class="time-row">
+                                    <span>09:00</span>
+                                    <div></div>
+                                </div>
+
+                                <div class="time-row">
+                                    <span>10:00</span>
+                                    <div></div>
+                                </div>
+
+                                <div class="time-row">
+                                    <span>11:00</span>
+                                    <div></div>
+                                </div>
+
+                                <div class="time-row">
+                                    <span>12:00</span>
+                                    <div></div>
+                                </div>
+
+                                <div class="time-row">
+                                    <span>13:00</span>
+                                    <div></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="page-footer">
+
+                                <span>
+                                    FOCUS
+                                </span>
+
+                                <span>
+                                    04
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BACK -->
+
+                        <div class="page-back">
+
+                            <div class="page-header">
+
+                                <span>
+                                    NOTES
+                                </span>
+
+                                <span>
+                                    05
+                                </span>
+
+                            </div>
+
+
+                            <h2>
+                                Notes & Ideas
+                            </h2>
+
+
+                            <div class="notes">
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                            </div>
+
+
+                            <div class="page-footer">
+
+                                <span>
+                                    PLAN THE PEAK
+                                </span>
+
+                                <span>
+                                    05
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTROLS -->
+
+            <div class="book-controls">
+
+                <button onclick="previousPage()">
+                    ←
+                </button>
+
+                <span id="pageIndicator">
+                    Page 04 / 34
+                </span>
+
+                <button onclick="nextPage()">
+                    →
+                </button>
+
+            </div>
+
+
+            <p class="flip-hint">
+                Click the page to flip through the planner
+            </p>
+
+        </section>
+
+
+        <!-- PRODUCT INFORMATION -->
+
+        <section class="product-info">
+
+            <div class="eyebrow">
+                THE DAILY PLANNER
+            </div>
+
+            <h1>
+                The Daily Planner
+            </h1>
+
+            <div class="product-price">
+                £<span id="price">28.00</span>
+            </div>
+
+            <p class="description">
+                A beautifully structured daily planner designed
+                to help you organise your time, focus on what
+                matters and make space for your best days.
+            </p>
+
+
+            <div class="divider"></div>
+
+
+            <!-- COLOUR -->
+
+            <div class="option">
+
+                <div class="option-header">
+
+                    <span>
+                        COLOUR
+                    </span>
+
+                    <strong id="selectedColour">
+                        Midnight
+                    </strong>
+
+                </div>
+
+
+                <div class="colour-options">
+
+                    <button
+                        class="colour active"
+                        onclick="selectColour(this, 'Midnight')"
+                    >
+                        Midnight
+                    </button>
+
+                    <button
+                        class="colour"
+                        onclick="selectColour(this, 'Slate')"
+                    >
+                        Slate
+                    </button>
+
+                    <button
+                        class="colour"
+                        onclick="selectColour(this, 'Blue')"
+                    >
+                        Blue
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUANTITY -->
+
+            <div class="option">
+
+                <div class="option-header">
+
+                    <span>
+                        QUANTITY
+                    </span>
+
+                </div>
+
+
+                <div class="quantity">
+
+                    <button onclick="decreaseQuantity()">
+                        −
+                    </button>
+
+                    <span id="quantity">
+                        1
+                    </span>
+
+                    <button onclick="increaseQuantity()">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CART -->
+
+            <button
+                class="add-cart"
+                onclick="addToCart()"
+            >
+                ADD TO BAG — £28.00
+            </button>
+
+
+            <!-- DETAILS -->
+
+            <div class="details">
+
+                <div>
+                    <span>
+                        SIZE
+                    </span>
+
+                    <strong>
+                        A5
+                    </strong>
+                </div>
+
+                <div>
+                    <span>
+                        PAGES
+                    </span>
+
+                    <strong>
+                        34
+                    </strong>
+                </div>
+
+                <div>
+                    <span>
+                        PAPER
+                    </span>
+
+                    <strong>
+                        100 GSM
+                    </strong>
+                </div>
+
+                <div>
+                    <span>
+                        YEAR
+                    </span>
+
+                    <strong>
+                        2027
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="product.js"></script>
+
+</body>
+</html>
